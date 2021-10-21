@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Supermercado
+        </h1>
+        <p>
+            Nosso supermecado está no mês de aniversário e todos os produtos vão ganhar 10% de desconto. Preencha o formulário a seguir com os dados do produto e o preço atual. O sistema vai calcular o novo preço para o produto.
+        </p>
+    </header>
+    <section id="formulario">
+        <h2>
+            Sobre os produtos
+        </h2>
+        <form action="mercado.php" onsubmit="return reajuste()">
+        <label for="produto"> Nome de Produto:</label>
+        <input type="text" name="produto" id="produto">
+        <br>
+        <label for="preco">Preço:</label>
+        <input type="number" name="preco" id="preco" min="1" max="10000" value="0" step="0.05">
+        <br>
+        <input type="submit" value="Calcular">
+
+        </form>
+    </section>
+    <section id="resultado">
+        <h2>
+            Resultados
+        </h2>
+        <p id="saida">
+            O resultado vai aparecer aqui.
+        </p>
+    </section>
+    <script src="mercado.js"></script>
+</body>
+</html>

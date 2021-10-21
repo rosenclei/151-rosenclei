@@ -1,0 +1,29 @@
+@charset "UTF-8";
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    background-color: darkgray;
+    /* background-image: carrega a imagem*/
+    background-image: url("mercado.jpg");
+    /* background-position: coloca a imagem no centro*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header, section{
+    background-color: white;
+    /*max-width:serve para dar uma largura máxima ao site*/
+    max-width: 600px;
+    padding: 10px;
+    margin: auto;
+    /* margin-bottom: serve para dar espaço em baixo*/
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.555);
+}
+input[type=submit]{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 008 - Javascript</title>
+    <style>
+        body{
+            background-image:linear-gradient(to right rgb(235, 213, 213), rgba(199, 199, 100, 0.589));
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+         main{
+            background-color: rgb(182, 165, 165);
+            width: 500px;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+            /* margin-top: Margem que fica acima do objeto */
+            margin-top: 200px;      
+        }   
+        input[type=submit]{
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+        }
+        input[type=submit]:hover{
+            background-color: rgba(51, 69, 98, 0.74);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            Antes e Depois
+        </h1>
+        <form action="salvar.php" method="get" onsubmit="return verifica()">
+            <label for="n">Número:</label>
+            <input type="number" name="numero" id="n" min="0" max="1000" value="0">
+            <input type="submit" value="OK">
+        </form>
+        <p id="resultado">
+            Aqui vai aparecer o resultado!
+        </p>
+
+    </main>
+    <script>
+        function verifica() {
+            let n = Number(document.getElementById("n").value)
+            let res = document.getElementById("resultado")
+            res.innerHTML=`O antecessor é ${n-1} e o posterior é ${n+1}`
+            
+            return false
+        }
+    </script>
+</body>
+</html>

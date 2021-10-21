@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 006 - Javascript</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(243, 198, 0);
+        }
+        main{
+            background-color: white;
+            width: 500px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.384);
+        }
+        input[type="submit"]{
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: red;
+        }
+        input[type="reset"]:hover{
+            background-color: rgba(236, 197, 20, 0.719);
+        }
+
+        input[type="reset"]{
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            Somador de Números
+        </h1>
+        <form action="salvar.php" method="get" onsubmit="return somar()">
+           <label for="n1">Número 1:</label>
+            <input type="number" name="n1" id="n1" min="0" max="100" value="0">
+            <br>
+            <label for="n2">Número 2:</label>
+            <input type="number" name="n2" id="n2" min="0" max="100" value="0">
+            <br>
+            <input type="submit" value="Somar"> 
+            <input type="reset" value="Limpar">
+        </form>
+
+        <p id="res">
+            O resultado vai aparecer aqui
+        </p>
+    </main>
+
+    <script>
+        function somar(){
+            // Pegar os dados do formulário
+            let n1 = Number(document.getElementById("n1").value)
+            let n2 = Number(document.getElementById("n2").value)
+            // Efetuar a soma
+            let s = n1 + n2
+            // Mostrar o resultado na tela
+            let resultado = document.getElementById("res")
+            resultado.innerHTML = `Somando ${n1} e ${n2} temos ${s}`
+            // Travar o envio do formulário
+            return false
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 004 JavaScript</title>
+
+</head>
+<body>
+        <h1>Nome do usuário - v2.0 &#x270C;</h1>
+        <button onclick="identificar()">Iniciar</button>
+        <p id="frase">Clique no botão acima e veja a mágica acontecer ...</p>
+            <script>
+                function identificar() {
+                        let nome = window.prompt ("Qual o seu nome?")
+                        let txt = document.getElementById ("frase")
+                        txt.innerHTML = `Olá, <strong>${nome}</strong>! É um grande prazer eu te conhecer &#x1F601;`
+                }
+            </script>
+</body>
+</html>

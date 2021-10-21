@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 003 - Javascript</title>
+</head>
+<body>
+    <h1>
+        Nome do Usuário - v1.0 &#x261D;
+    </h1>
+    <button onclick="perguntar()">
+        Iniciar
+    </button>
+
+<script>
+    function perguntar(){
+        // A palavra let é usada para declarar uma variavel.
+       let n = window.prompt("Qual é o seu nome?")
+       // Na linha acima, a palavra variável n vai receber o resultado do prompt.
+       window.alert(`Olá ${n}, tudo bem com você`)
+       // Quando usamos crases, damos o nome de Template String. Lá podemos ${} como placeholder.
+    }
+</script>
+</body>
+</html>

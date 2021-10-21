@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar de Velocidade</title>
+    <style>
+        body{
+            background-color: rgba(241, 208, 21, 0.856);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        main, #res{
+            background-color: white;
+            margin: auto;
+            margin-bottom: 10px;
+            width: 500px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.336);
+        }
+        input[type = submit]{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+        span.ok{
+            font-weight: bold;
+            color: green;
+        }
+        span.alerta{
+            font-weight: bold;
+            color: rgb(207, 17, 17);
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            Radar de Velocidade
+        </h1>
+        <form action="radar.php" method="get" onsubmit="return multa()">
+            <input type="number" name="vel" id="vel" min="0" max="220" value="50" step="0.1">Km/h
+            <input type="submit" value="Verificar">
+        </form>
+    </main>
+    <p id="res">Resultado aparece aqui...</p>
+    <script>
+        function multa(){
+
+          let vel = Number(document.getElementById("vel").value)
+          let res = document.getElementById("res")
+          if(vel <=80){
+            res.innerHTML = `<span class = 'ok'>Andando a ${vel}km/h, dentro da velocidade permitida.</span>`
+
+          }else{
+              res.innerHTML = `<span class = 'alerta'>VEICULO MULTADO! A velocidade ${vel}km/h excede o limite!</span>`
+          }
+            
+            return false
+        }
+    </script>
+</body>
+</html>

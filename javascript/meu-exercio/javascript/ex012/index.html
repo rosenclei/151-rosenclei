@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+    <style>
+        body{
+            background-color: rgb(114, 45, 45);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        main, #res{
+            background-color: white;
+            margin: auto;
+            width: 500px;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.651);
+        }
+        input[type =submit]{
+            background-color: gray;
+            color: black;
+            width: 105px;
+            padding: 3px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.192);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            Par ou Impar
+        </h1>
+        <form action="verifica.php" method="get" onsubmit="return imparpar()">
+        <label for="num">Número:</label>
+        <input type="number" name="num" id="num" min="0" max="1000" value="0">
+        <input type="submit" value="Par Ou Impar?">
+        </form>
+    </main>
+    <p id="res"> O numero é Par ou Impar?</p>
+    <script>
+        function imparpar(){
+            let n = Number(document.getElementById("num").value)
+            let res = document.getElementById("res")
+            if(n % 2 == 0){
+                res.innerHTML = `O número ${n} é Par`
+            }else if(n % 2 == 1){
+                res.innerHTML = ` O numero ${n} é Impar`
+            }
+                
+
+            return false
+        }
+    </script>
+</body>
+</html>
